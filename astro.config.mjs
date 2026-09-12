@@ -1,5 +1,11 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  // Substitute with your actual temporary configuration details:
+  site: 'https://cjcboy25.github.io', 
+  base: '/automavix', 
+  trailingSlash: 'always',
+  output: 'static',
+  integrations: [tailwind()]
+});

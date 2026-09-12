@@ -1,0 +1,18 @@
+import { defineConfig } from 'astro/config';
+
+import tailwindcss from '@tailwindcss/vite';
+
+export default defineConfig({
+  // Temporarily set to your GitHub Pages staging/test domain
+  site: 'https://cjcboy25.github.io',
+
+  // Matches your GitHub repository name
+  base: '/automavix',
+
+  trailingSlash: 'always',
+  output: 'static',
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
+});
