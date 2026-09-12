@@ -1,0 +1,63 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Automavix - Next Gen Automation Ecosystems" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+        <style>
+          @import "tailwindcss";
+        </style>
+
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/images/logo.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<!-- Modern typography selection -->
+		<link rel="preconnect" href="https://googleapis.com">
+		<link rel="preconnect" href="https://gstatic.com" crossorigin>
+		<link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-[#0b0c10] text-slate-100 antialiased font-['Plus_Jakarta_Sans',sans-serif]">
+		<!-- Framer-like ambient background mesh -->
+		<div class="fixed inset-0 z-[-1] bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+		
+		<!-- Universal Navigation Bar -->
+		<nav class="sticky top-0 z-50 backdrop-blur-md border-b border-white/5 bg-[#0b0c10]/70">
+			<div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+				<a href="/" class="flex items-center gap-3 hover:opacity-90 transition">
+					<img src="/images/logo.png" alt="Automavix Logo" class="h-8 w-auto rounded" />
+					<span class="font-bold text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">Automavix</span>
+				</a>
+				<div class="hidden md:flex items-center gap-8 text-sm text-slate-400 font-medium">
+					<a href="#features" class="hover:text-white transition">Features</a>
+					<a href="#ecosystem" class="hover:text-white transition">Ecosystem</a>
+					<a href="/blog" class="hover:text-white transition">Insights</a>
+				</div>
+				<a href="#contact" class="text-sm bg-white text-black px-4 py-2 rounded-full font-semibold hover:bg-slate-200 transition shadow-lg shadow-white/5">
+					Get Started
+				</a>
+			</div>
+		</nav>
+
+		<slot />
+
+		<!-- Footer -->
+		<footer class="border-t border-white/5 bg-[#07080a] mt-32 py-12 text-sm text-slate-500">
+			<div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+				<p>&copy; 2026 Automavix. All rights reserved.</p>
+				<div class="flex gap-6">
+					<a href="#" class="hover:text-slate-300">Privacy</a>
+					<a href="#" class="hover:text-slate-300">Terms</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
