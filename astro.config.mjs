@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindv4 from '@tailwindcss/vite';
 
 export default defineConfig({
-  // Substitute with your actual temporary configuration details:
-  site: 'https://cjcboy25.github.io', 
+  site: 'https://github.io',
   base: '/automavix', 
   trailingSlash: 'always',
   output: 'static',
-  integrations: [tailwind()]
+  vite: {
+    plugins: [tailwindv4()]
+  }
 });
